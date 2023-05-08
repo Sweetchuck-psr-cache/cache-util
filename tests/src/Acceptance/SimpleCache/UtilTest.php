@@ -12,13 +12,13 @@ declare(strict_types = 1);
  * with this source code in the file LICENSE.
  */
 
-namespace Cache\Util\Tests;
+namespace Cache\Util\Tests\Acceptance\SimpleCache;
 
 use Cache\Adapter\PHPArray\ArrayCachePool;
 use Cache\Util;
 use PHPUnit\Framework\TestCase;
 
-class SimpleCacheUtilTest extends TestCase
+class UtilTest extends TestCase
 {
     public function testRememberCacheHit(): void
     {

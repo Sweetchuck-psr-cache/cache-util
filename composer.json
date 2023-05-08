@@ -1,0 +1,90 @@
+{
+    "name": "cache/util",
+    "description": "PSR-6 and PSR-16 Caching Utilities",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "cache",
+        "psr6",
+        "psr16",
+        "utilities",
+        "util"
+    ],
+    "authors": [
+        {
+            "name": "Tobias Nyholm",
+            "email": "tobias.nyholm@gmail.com",
+            "homepage": "https://github.com/nyholm"
+        },
+        {
+            "name": "RJ Garcia",
+            "email": "rj@bighead.net",
+            "homepage": "https://github.com/ragboyjr"
+        }
+    ],
+    "homepage": "https://www.php-cache.com/en/latest/",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "repositories": {
+        "cache/adapter-common": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck-psr-cache/cache-adapter-common.git"
+        },
+        "cache/array-adapter": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck-psr-cache/cache-array-adapter.git"
+        },
+        "cache/hierarchical-cache": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck-psr-cache/cache-hierarchical-cache.git"
+        },
+        "cache/tag-interop": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck-psr-cache/cache-tag-interop.git"
+        },
+        "tedivm/stash": {
+            "type": "github",
+            "url": "https://github.com/Sweetchuck/tedivm-stash.git"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "psr/cache": "^3.0"
+    },
+    "require-dev": {
+        "cache/array-adapter": "3.x-dev",
+        "phpunit/phpunit": "^10.0",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cache\\Util\\": "src/"
+        },
+        "files": [
+            "src/SimpleCache/util.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cache\\Util\\Tests\\": "tests/src/"
+        }
+    },
+    "scripts": {
+        "lint": [
+            "@lint:phpcs"
+        ],
+        "lint:phpcs": "phpcs",
+        "test:all": "phpunit",
+        "test": [
+            "@test:acceptance"
+        ],
+        "test:acceptance": "phpunit --testsuite='Acceptance'"
+    }
+}
