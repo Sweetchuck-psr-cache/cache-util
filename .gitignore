@@ -5,6 +5,8 @@
 /vendor/
 /composer.lock
 
-/phpcs.xml.dist/
+/phpcs.xml
 
-/phpunit.xml.dist/
+/phpstan.neon
+
+/phpunit.xml
